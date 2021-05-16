@@ -1,0 +1,225 @@
+---------------------------------//API For Product Service//--------------------------------------------------------
+//Read 
+API for get all the Product details in the database (GET Request)
+Resource: ProductService
+Request: GET Product_GadgetBudget/Product
+Responce: HTML table with Transaction_Code,Depositor,Account_No,Bank, Amount,CVV
+
+
+//Insert
+API for register Product to the database (POST Request)
+Resource: ProductService
+Request: POST GadgetBudget/Product
+Media: Application form Url Encoded
+Data: {
+	“Product_Code”: “<Product_Code>”,
+        “Product_Name”: “<Product_Name>”,
+	“Category”: “<Category>”,
+	“collaborators”: “<collaborators>”,
+	“Email”: “<Email>”,
+        “Price”: “<Price>”
+ }
+Response:  {  result = “Insertion Success” }
+           {  error =  “Error while insert” }
+
+
+//Delete
+API for Delete Product to the database (DELETE Request)
+Resource: ProductService
+Request: DELETE GadgetBudget/Product
+Media: Application XML
+Data:
+<productData>
+ <Product_ID>"<Product_ID>"</Product_ID>
+</productData> 
+Response:   {  result = “Successfully product Details Deleted” }
+            {  error =  “Error while deleting” }
+
+
+//Update
+API for Update Product to the database (PUT Request)
+Resource: ProductService
+Request: PUT GadgetBudget/Product
+Media: Application JSON
+Data:
+  {    
+  	"Product_ID":"<Product_ID>",
+ 	"Product_Code":"<Product_Code>",
+ 	"Product_Name":"<Product_Name>",
+ 	"Category":"<Category>",
+ 	"collaborators":"<collaborators>",
+ 	"Price":"<Price>",
+ 	"Email":"<Email>"
+   }
+Response: {  result = “Successfully Product Detail Updated” }
+                 {  error =  “Error while updating” }
+
+
+---------------------------------//API For Payment Service//--------------------------------------------------------
+//Read 
+API for get all the Payment details in the database (GET Request)
+Resource: PaymentService
+Request: GET GadgetBudget/Payment
+Responce: HTML table with Transaction_Code,Depositor,Account_No,Bank,Amount,CVV
+
+
+//Insert
+API for register Payment to the database (POST Request)
+Resource: PaymentService
+Request: POST GadgetBudget/Payment
+Media: Application form Url Encoded
+Data: {
+	 
+	 "Transaction_Code":"<Transaction_Code>",
+ 	 "Depositor":"<Depositor>",
+	 "Account_No":"<Account_No>",
+	 "Bank":"<Bank>",
+	 "Amount":"<Amount>",
+	 "CVV":"<CVV>"
+ }
+Response:  {  result = “Insertion Success” }
+           {  error =  “Error while insert” }
+
+//Delete
+API for Delete Payment to the database (DELETE Request)
+Resource: PaymentService
+Request: DELETE GadgetBudget/Payment
+Media: Application XML
+Data:
+<paymentData>
+ <Payment_ID>"<Payment_ID>"</Payment_ID>
+</paymentData>  
+
+Response:   {  result = “Successfully Payment Details Deleted” }
+            {  error =  “Error while deleting” }
+
+
+//Update
+API for Update Payment to the database (PUT Request)
+Resource: Payment Service
+Request: PUT GadgetBudget/Payment
+Media: Application JSON
+Data:
+  {    
+  	 "Product_ID":"<Product_ID>",
+ 	 "Transaction_Code":"<Transaction_Code>",
+ 	 "Depositor":"<Depositor>",
+	 "Account_No":"<Account_No>",
+	 "Bank":"<Bank>",
+	 "Amount":"<Amount>",
+	 "CVV":"<CVV>"
+   }
+Response: {  result = “Successfully Payment Detail Updated” }
+          {  error =  “Error while updating” }
+
+---------------------------------//API For Fund Service//--------------------------------------------------------
+//Read 
+API for get all the Fund details in the database (GET Request)
+Resource: FundService
+Request: GET GadgetBudget/Fund
+Responce: HTML table with Funding_OrganizationName,Interesting_ProjectArea,Funding_Amount,Email
+
+//Insert
+API for register Fund to the database (POST Request)
+Resource: FundService
+Request: POST GadgetBudget/Fund
+Media: Application form Url Encoded
+Data: {
+	 
+	 "FundingOrgName":"<FundingOrgName>",
+ 	 "InterestingProjArea":"<InterestingProjArea>",
+	 "FundingAmount":"<FundingAmount>",
+	 "Email":"<Email>"
+	 
+ }
+Response:  {  result = “Insertion Success” }
+           {  error =  “Error while insert” }
+
+//Delete
+API for Delete Fund to the database (DELETE Request)
+Resource: FundService
+Request: DELETE GadgetBudget/Fund
+Media: Application XML
+Data:
+<FundData>
+ <Funder_ID>"<Funder_ID>"</Funder_ID>
+</FundData>  
+
+Response:   {  result = “Successfully Fund Details Deleted” }
+            {  error =  “Error while deleting” }
+
+
+//Update
+API for Update Fund details to the database (PUT Request)
+Resource: Fund Service
+Request: PUT GadgetBudget/Fund
+Media: Application JSON
+Data:
+  {    
+  	 "Funder_ID":"<Funder_ID>",
+ 	 "FundingOrgName":"<FundingOrgName>",
+ 	 "InterestingProjArea":"<InterestingProjArea>",
+	 "FundingAmount":"<FundingAmount>",
+	 "Email":"<Email>"
+   }
+Response: {  result = “Successfully Fund Detail Updated” }
+          {  error =  “Error while updating” }
+
+
+---------------------------------//API For User Service//--------------------------------------------------------
+//Read 
+API for get all the User details in the database (GET Request)
+Resource: UserService
+Request: GET GadgetBudget/User
+Responce: HTML table with user_Name,User_Type,Email,Password
+
+
+//Insert
+API for insert user details to the database (POST Request)
+Resource: UserService
+Request: POST GadgetBudget/User
+Media: Application form Url Encoded
+Data: {
+	 
+	 "user_Name":"<user_Name>",
+ 	 "User_Type":"<User_Type>",
+	 "Email":"<Email>",
+	 "Password":"<Password>"
+	 
+ }
+Response:  {  result = “Insertion Success” }
+           {  error =  “Error while insert” }
+
+
+//Delete
+API for Delete user to the database (DELETE Request)
+Resource: UserService
+Request: DELETE GadgetBudget/User
+Media: Application XML
+Data:
+<UserData>
+ <user_ID>"<user_ID>"</user_ID>
+</UserData> 
+
+Response:   {  result = “Successfully User Deleted” }
+            {  error =  “Error while deleting” }
+
+
+//Update
+API for Update User details to the database (PUT Request)
+Resource: User Service
+Request: PUT GadgetBudget/User
+Media: Application JSON
+Data:
+  {    
+  	 "user_ID":"<user_ID>",
+ 	  "user_Name":"<user_Name>",
+ 	 "User_Type":"<User_Type>",
+	 "Email":"<Email>",
+	 "Password":"<Password>"
+}
+
+Response: {  result = “Successfully User Detail Updated” }
+          {  error =  “Error while updating” }
+
+
